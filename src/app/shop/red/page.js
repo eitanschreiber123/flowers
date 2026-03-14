@@ -15,7 +15,11 @@ export default async function Home() {
         <Header />
                 <section style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <h1>Rojo</h1>
-                  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, 200px)',gap:'20px',width:'100vw',justifyContent:'space-evenly'}}>{[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => <Image src={`/flowers/red_${i}.jpeg`} height={200} width={200} style={{margin:'20px'}}/>)}</div>
+                  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, 200px)',gap:'20px',width:'100vw',justifyContent:'space-evenly'}}>{[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => <div style={{display:'flex',flexDirection:'column'}}>
+                    <Image src={`/flowers/red_${i}.jpeg`} height={200} width={200} style={{margin:'20px'}}/>
+                    <p>Rojo {i}</p>
+                      <p>$5</p>
+                    </div>)}</div>
                 </section>
                 <Footer />
       </main>
