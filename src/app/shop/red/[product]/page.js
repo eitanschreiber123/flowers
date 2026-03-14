@@ -8,14 +8,14 @@ import styles from "../../page.module.css";
 export const revalidate = 0;
 
 export default async function Home({params}) {
-    const { product } = params;
+    const { product } = await params;
   const {arriba} = await getData();
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <Header />
-                <section style={{display:'flex'}}>
-                    <Image src={`/flowers/red_${product}.jpeg`} height={300} width={300}/>
+                <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly'}} className={styles.oneProduct}>
+                    <Image src={`/flowers/red_${product}.jpeg`} height={500} width={500} className={styles.oneImage}/>
                     <div>
                         <h1>Rojo {product}</h1>
                         <p>$5</p>

@@ -15,8 +15,8 @@ export default async function Home() {
         <Header />
                 <section style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
                   <h1>Mixto</h1>
-                  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, 200px)',gap:'20px',width:'100vw',justifyContent:'space-evenly'}}>{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => <Link href={`/shop/mixed/${i}`} style={{display:'flex',flexDirection:'column'}}>
-                    <Image src={`/flowers/mixed_${i}.jpeg`} height={200} width={200} style={{margin:'20px'}}/>
+                  <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, 200px)',gap:'20px',width:'100vw',justifyContent:'space-evenly'}}>{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(i => <Link href={`/shop/mixed/${i}`} style={{display:'flex',flexDirection:'column',margin:'20px'}}>
+                    <Image src={`/flowers/mixed_${i}.jpeg`} height={200} width={200}/>
                     <p>Mixto {i}</p>
                       <p>$5</p>
                     </Link>)}</div>

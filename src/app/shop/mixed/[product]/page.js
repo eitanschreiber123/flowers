@@ -15,7 +15,7 @@ export default async function Home({params}) {
       <main className={styles.main}>
         <Header />
                 <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly'}} className={styles.oneProduct}>
-                    <Image src={`/flowers/mixed_${product}.jpeg`} height={500} width={500}/>
+                    <Image src={`/flowers/mixed_${product}.jpeg`} height={500} width={500} className={styles.oneImage}/>
                     <div>
                         <h1>Mixto {product}</h1>
                         <p>$5</p>
