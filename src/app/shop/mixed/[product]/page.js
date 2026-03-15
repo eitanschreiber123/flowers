@@ -20,6 +20,7 @@ export default async function Home({params}) {
                         <h1>Mixto {product}</h1>
                         <p>$5</p>
                         <p>Muy bonita</p>
+                        <Link href={`https://wa.me/593979212069?text=Hola%20,%20me%20interesa%20este%20producto:%20https%3A%2F%2Fflores-de-guayaquil.vercel.app%2Fshop%2Fmixed%2F${product}`} style={{backgroundColor:'blue',padding:'2px 19px',color:'white',borderRadius:'10px',margin:'10px',alignSelf:'center'}}>Compra</Link>
                     </div>
                 </section>
                 <Footer />
