@@ -5,15 +5,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly'}} className="container">
-          <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+    <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly',backgroundColor:'#F9F3F0'}} className="container">
+          <div className="first" style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             <h1>Menu</h1>
             <Link href="/">Inicio</Link>
             <Link href="/shop">Tienda</Link>
             <Link href="/about">Quienes somos</Link>
             <Link href="/about">Contacto</Link>
           </div>
-          <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}> 
+          <div className="second" style={{display:'flex',flexDirection:'column',alignItems:'center'}}> 
             <h1>Flores de Guayaquil</h1>
             <div style={{display:'flex'}}>
               <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" width="30" height="30" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ export default function Footer() {
             <span></span>
             <span></span>
           </div>
-          <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+          <div className="third" style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
             <h1>Nosotros</h1>
 <p>Preguntas Frecuentes</p>
 <p>Políticas de Privacidad</p>
@@ -40,6 +40,9 @@ export default function Footer() {
         .container {
           flex-direction:row;
         }
+          .first, .second, .third {
+          width:33%;
+          }
         @media (max-width: 750px) {
           .container {
             flex-direction:column;

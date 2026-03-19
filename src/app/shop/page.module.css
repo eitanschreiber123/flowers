@@ -5,7 +5,7 @@
     width: 500px;
   height: auto;
 }
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     .oneProduct {
     flex-direction: column;
     align-items:center;
@@ -13,4 +13,67 @@
 .oneImage {
     width: 95vw;
 }
+}
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* Image zoom */
+.image {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* Button */
+.buttonWrapper {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  width:90%;
+}
+
+.card:hover .buttonWrapper {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.button {
+  background: white;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width:100%;
+}
+
+.button:hover {
+  background: #e5e5e5;
 }

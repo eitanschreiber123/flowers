@@ -31,15 +31,15 @@ export default function Header() {
 
       {/* Desktop Links */}
       <div className="links">
-        <Link href="/" style={{padding:'10px'}}>Inicio</Link>
+        <Link href="/" style={{padding:'10px',color:'#99806c',fontWeight: 600,fontSize: '16px'}}>Inicio</Link>
 
         <div ref={dropdownRef} style={{position: "relative",display: "inline-block",padding:'10px'}}>
           <div style={{display: "flex",alignItems: "center",gap: "6px",cursor: "pointer"}}>
-            <a href="/shop">tienda</a>
+            <Link href="/shop" style={{color:'#99806c',fontWeight: 600,fontSize: '16px'}}>Tienda</Link>
             <span onClick={e=>{
               e.stopPropagation();
               setIsOpen((prev) => !prev);
-            }} style={{fontSize: "12px",userSelect: "none"}}>▼</span>
+            }} style={{fontSize: "12px",userSelect: "none",color:'#99806c'}}>▼</span>
           </div>
 
           {isOpen && (
@@ -58,14 +58,14 @@ export default function Header() {
                 zIndex: 1000,
               }}
             >
-              <div><a href="/shop/red">rojo</a></div>
-              <div><a href="/shop/mixed">mixto</a></div>
+              <div><Link style={{color:'#99806c',fontWeight: 600,fontSize: '16px'}} href="/shop/red">Rojo</Link></div>
+              <div><Link style={{color:'#99806c',fontWeight: 600,fontSize: '16px'}} href="/shop/mixed">Mixto</Link></div>
             </div>
           )}
         </div>
 
-        <Link href="/about" style={{padding:'10px'}}>Quienes somos</Link>
-        <Link href="/contact" style={{padding:'10px'}}>Contacto</Link>
+        <Link href="/about" style={{padding:'10px',color:'#99806c',fontWeight: 600,fontSize: '16px'}}>Quienes somos</Link>
+        <Link href="/contact" style={{padding:'10px',color:'#99806c',fontWeight: 600,fontSize: '16px'}}>Contacto</Link>
       </div>
 
 
@@ -79,7 +79,7 @@ export default function Header() {
       </span>
 
 
-      <h1 className="title">Flores de Guayaquil</h1>
+      <h1 className="title" style={{color:'#99806c'}}>Flores de Guayaquil</h1>
 
 
       {/* Mobile Menu */}
@@ -101,11 +101,14 @@ export default function Header() {
           display: grid;
           grid-template-columns: 1fr auto 1fr;
           align-items: center;
+          background-color:#f9f3f0;
+          height:85px;
         }
 
         .links {
           grid-column: 1;
           display:flex;
+          padding-left:15px;
         }
 
         .title {

@@ -14,12 +14,23 @@ export default async function Home() {
       <main className={styles.main}>
         <Header />
                 <section style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-                  <h1>Rojo</h1>
+                  <section style={{width:'100%',height:'40vh',display:'flex',alignItems:'center',backgroundImage:'url(/intro.png)',backgroundRepeat:'no-repeat',backgroundPosition:'center',backgroundSize:'cover'}}>
+                  <h1 style={{color:'white',fontSize:'50px',lineHeight:'58px',color:'#99806c',fontWeight: 600,paddingLeft:'15px'}}>Rojo</h1>
+                </section>
                   <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit, 200px)',gap:'20px',width:'100vw',justifyContent:'space-evenly'}}>{[1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => <Link href={`/shop/red/${i}`} style={{display:'flex',flexDirection:'column',margin:'20px'}}>
-                    <Image src={`/flowers/red_${i}.jpeg`} height={200} width={200}/>
+                    <div className={styles.card}>
+                            <Image src={`/flowers/red_${i}.jpeg`}alt="Sample"fill className={styles.image}/>
+                      
+                            {/* Overlay */}
+                            <div className={styles.overlay}></div>
+                      
+                            {/* Button */}
+                            <div className={styles.buttonWrapper}>
+                              <button className={styles.button}>Compra</button>
+                            </div>
+                          </div>
                     <p>Rojo {i}</p>
                       <p>$5</p>
-                      <Link href={`https://wa.me/593979212069?text=Hola%20,%20me%20interesa%20este%20producto:%20https%3A%2F%2Fflores-de-guayaquil.vercel.app%2Fshop%2Fred%2F${i}`} style={{backgroundColor:'blue',padding:'2px 19px',color:'white',borderRadius:'10px',margin:'10px',alignSelf:'center'}}>Compra</Link>
                     </Link>)}</div>
                 </section>
                 <Footer />
