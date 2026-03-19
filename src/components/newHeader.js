@@ -79,18 +79,18 @@ export default function Header() {
       </span>
 
 
-      <h1 className="title" style={{color:'#99806c'}}>Flores de Guayaquil</h1>
+      <h1 className="title" style={{color:'#99806c',fontSize: '1.5em', fontWeight: 700}}>Flores de Guayaquil</h1>
 
 
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="mobileMenu">
-          <Link href="/">Inicio</Link>
-          <Link href="/shop">Tienda</Link>
-          <Link href="/shop/red">Rojo</Link>
-          <Link href="/shop/mixed">Mixto</Link>
-          <Link href="/about">Quienes somos</Link>
-          <Link href="/contact">Contacto</Link>
+          <Link style={{color:'#99806c'}} href="/">Inicio</Link>
+          <Link style={{color:'#99806c'}} href="/shop">Tienda</Link>
+          <Link style={{color:'#99806c'}} href="/shop/red">Rojo</Link>
+          <Link style={{color:'#99806c'}} href="/shop/mixed">Mixto</Link>
+          <Link style={{color:'#99806c'}} href="/about">Quienes somos</Link>
+          <Link style={{color:'#99806c'}} href="/contact">Contacto</Link>
         </div>
       )}
 

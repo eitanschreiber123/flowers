@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/components/newHeader";
 import Footer from "@/components/footer";
 import styles from "../../page.module.css";
+import ImageZoom from "@/components/zoom"
 
 export const revalidate = 0;
 
@@ -32,7 +33,7 @@ export default async function Home({params}) {
 <p>Rojo</p>
 </div>
                 <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly'}} className={styles.oneProduct}>
-                    <Image src={`/flowers/red_${product}.jpeg`} height={500} width={500} className={styles.oneImage}/>
+                    <ImageZoom src={`/flowers/red_${product}.jpeg`} c={styles.oneImage}/>
                     <div style={{display: 'flex', flexDirection: 'column', width: '40%', alignItems: 'center'}}>
                         <h1>Rojo {product}</h1>
                         <p>$5</p>

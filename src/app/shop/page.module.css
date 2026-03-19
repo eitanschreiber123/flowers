@@ -1,3 +1,12 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
 .oneProduct {
     flex-direction: row;
 }
@@ -76,4 +85,12 @@
 
 .button:hover {
   background: #e5e5e5;
+}
+@media (max-width: 700px) {
+  .overlay {
+    opacity:1;
+  }
+  .buttonWrapper {
+    opacity: 1;
+  }
 }

@@ -1,54 +1,68 @@
-"use client"
-import { GeistSans } from "geist/font/sans";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly',backgroundColor:'#F9F3F0'}} className="container">
-          <div className="first" style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-            <h1>Menu</h1>
+    <footer className="w-[90vw] bg-[#F9F3F0] px-6 py-12 text-[1.2em]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center md:text-left">
+
+        {/* Menu */}
+        <div className="space-y-4">
+          <h2 className="text-[1.2em] font-semibold">Menu</h2>
+          <div className="flex flex-col gap-2 text-[1.2em] text-gray-700">
             <Link href="/">Inicio</Link>
             <Link href="/shop">Tienda</Link>
-            <Link href="/about">Quienes somos</Link>
-            <Link href="/about">Contacto</Link>
+            <Link href="/about">Quiénes somos</Link>
+            <Link href="/contact">Contacto</Link>
           </div>
-          <div className="second" style={{display:'flex',flexDirection:'column',alignItems:'center'}}> 
-            <h1>Flores de Guayaquil</h1>
-            <div style={{display:'flex'}}>
-              <svg aria-hidden="true" class="e-font-icon-svg e-fas-map-marker-alt" width="30" height="30" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
-  <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-</svg><p>Hurtado entre Tungurahua y Lizardo García</p></div>
-            <div style={{display:'flex'}}>
-              <svg aria-hidden="true" class="e-font-icon-svg e-far-clock" width="30" height="30" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-  <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
-</svg><p>Lun - Sab de 8:30am - 6:00pm</p></div>
-            <div style={{display:'flex'}}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none">
-  <path d="M21 5.5C21 14.0604 14.0604 21 5.5 21C5.11378 21 4.73086 20.9859 4.35172 20.9581C3.91662 20.9262 3.69906 20.9103 3.50103 20.7963C3.33701 20.7019 3.18146 20.5345 3.09925 20.364C3 20.1582 3 19.9181 3 19.438V16.6207C3 16.2169 3 16.015 3.06645 15.842C3.12515 15.6891 3.22049 15.553 3.3441 15.4456C3.48403 15.324 3.67376 15.255 4.05321 15.117L7.26005 13.9509C7.70153 13.7904 7.92227 13.7101 8.1317 13.7237C8.31637 13.7357 8.49408 13.7988 8.64506 13.9058C8.81628 14.0271 8.93713 14.2285 9.17882 14.6314L10 16C12.6499 14.7999 14.7981 12.6489 16 10L14.6314 9.17882C14.2285 8.93713 14.0271 8.81628 13.9058 8.64506C13.7988 8.49408 13.7357 8.31637 13.7237 8.1317C13.7101 7.92227 13.7904 7.70153 13.9509 7.26005L15.117 4.05321C15.255 3.67376 15.324 3.48403 15.4456 3.3441C15.553 3.22049 15.6891 3.12515 15.842 3.06645C16.015 3 16.2169 3 16.6207 3H19.438C19.9181 3 20.1582 3 20.364 3.09925C20.5345 3.18146 20.7019 3.33701 20.7963 3.50103C20.9103 3.69907 20.9262 3.91662 20.9581 4.35173C20.9859 4.73086 21 5.11378 21 5.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg><p>+593 97 921 2069</p></div>
-            <span></span>
-            <span></span>
+        </div>
+
+        {/* Info */}
+        <div className="space-y-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          <h2 className="text-[1.2em] font-semibold">Flores de Guayaquil</h2>
+
+          <div className="flex items-start gap-3 text-[1.2em] text-gray-700">
+            <svg width="20" height="20" viewBox="0 0 384 512" fill="currentColor">
+              <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z" />
+            </svg>
+            <p>Hurtado entre Tungurahua y Lizardo García</p>
           </div>
-          <div className="third" style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
-            <h1>Nosotros</h1>
-<p>Preguntas Frecuentes</p>
-<p>Políticas de Privacidad</p>
-<p>Términos y Condiciones</p>
+
+          <div className="flex items-start gap-3 text-[1.2em] text-gray-700">
+            <svg width="20" height="20" viewBox="0 0 512 512" fill="currentColor">
+              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z" />
+            </svg>
+            <p>Lun - Sab de 8:30am - 6:00pm</p>
           </div>
-          <style>{`
-        .container {
-          flex-direction:row;
-        }
-          .first, .second, .third {
-          width:33%;
-          }
-        @media (max-width: 750px) {
-          .container {
-            flex-direction:column;
-          }
-        }
-      `}</style>
-        </section>
+
+          <div className="flex items-start gap-3 text-[1.2em] text-gray-700">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 5.5C21 14.0604 14.0604 21 5.5 21C5.11378 21 4.73086 20.9859 4.35172 20.9581C3.91662 20.9262 3.69906 20.9103 3.50103 20.7963C3.33701 20.7019 3.18146 20.5345 3.09925 20.364C3 20.1582 3 19.9181 3 19.438V16.6207C3 16.2169 3 16.015 3.06645 15.842C3.12515 15.6891 3.22049 15.553 3.3441 15.4456C3.48403 15.324 3.67376 15.255 4.05321 15.117L7.26005 13.9509C7.70153 13.7904 7.92227 13.7101 8.1317 13.7237C8.31637 13.7357 8.49408 13.7988 8.64506 13.9058C8.81628 14.0271 8.93713 14.2285 9.17882 14.6314L10 16C12.6499 14.7999 14.7981 12.6489 16 10L14.6314 9.17882C14.2285 8.93713 14.0271 8.81628 13.9058 8.64506C13.7988 8.49408 13.7357 8.31637 13.7237 8.1317C13.7101 7.92227 13.7904 7.70153 13.9509 7.26005L15.117 4.05321" />
+            </svg>
+            <p>+593 97 921 2069</p>
+          </div>
+
+          {/* Social Icons */}
+          <div style={{display:'flex'}}>
+						<svg style={{width:'50px',height:'50px'}} viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+						<svg style={{width:'50px',height:'50px'}} viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+            </div>
+        </div>
+
+        {/* Legal */}
+        <div className="space-y-4">
+          <h2 className="text-[1.2em] font-semibold">Nosotros</h2>
+          <div className="flex flex-col gap-2 text-[1.2em] text-gray-700">
+            <p>Preguntas Frecuentes</p>
+            <p>Políticas de Privacidad</p>
+            <p>Términos y Condiciones</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="mt-10 text-center text-xs text-gray-500">
+        © {new Date().getFullYear()} Flores de Guayaquil. Todos los derechos reservados.
+      </div>
+    </footer>
   );
 }
