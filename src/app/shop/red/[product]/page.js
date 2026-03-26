@@ -10,7 +10,7 @@ export const revalidate = 0;
 
 export default async function Home({params}) {
     const { product } = await params;
-  const {Rojo_precios, Rojo_nombres, Mixto_precios, Mixto_nombres} = await getData();
+  const {Rojo_precios, Rojo_nombres} = await getData();
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -35,8 +35,8 @@ export default async function Home({params}) {
                 <section style={{display:'flex',width:'100vw',justifyContent:'space-evenly'}} className={styles.oneProduct}>
                     <ImageZoom src={`/flowers/red_${product}.jpeg`} c={styles.oneImage}/>
                     <div style={{display: 'flex', flexDirection: 'column', width: '40%', alignItems: 'center'}}>
-                        <h1>{Rojo_nombres[`field${product}`]}</h1>
-                        <p>{Rojo_precios[`field${product}`]}</p>
+                        <h1>{Rojo_nombres?.[`field${product}`]}</h1>
+                        <p>{Rojo_precios?.[`field${product}`]}</p>
                         <p>Muy bonita</p>
                         <Link href={`https://wa.me/593979212069?text=Hola%20,%20me%20interesa%20este%20producto:%20https%3A%2F%2Fflores-de-guayaquil.vercel.app%2Fshop%2Fred%2F${product}`} style={{backgroundColor:'blue',padding:'2px 19px',color:'white',borderRadius:'20px',margin:'10px',alignSelf:'center',width: '100%', textAlign: 'center', fontSize: '1.5em'}}>Compra</Link>
                     </div>
@@ -56,8 +56,8 @@ export default async function Home({params}) {
                                               </div>
                                             </div>
                   
-                                        <p>{Rojo_nombres[`field${i}`]}</p>
-                      <p>{Rojo_precios[`field${i}`]}</p>
+                                        <p>{Rojo_nombres?.[`field${i}`]}</p>
+                      <p>{Rojo_precios?.[`field${i}`]}</p>
                                         </Link>)}</div>
                 </section>
                 <Footer />

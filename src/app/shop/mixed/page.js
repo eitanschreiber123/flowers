@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 export const revalidate = 0;
 
 export default async function Home() {
-  const {Rojo_precios, Rojo_nombres, Mixto_precios, Mixto_nombres} = await getData();
+  const {Mixto_precios, Mixto_nombres} = await getData();
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -29,8 +29,8 @@ export default async function Home() {
                               <button className={styles.button}>Compra</button>
                             </div>
                           </div>
-                    <p>{Mixto_nombres[`field${i}`]}</p>
-                      <p>{Mixto_precios[`field${i}`]}</p>
+                    <p>{Mixto_nombres?.[`field${i}`]}</p>
+                      <p>{Mixto_precios?.[`field${i}`]}</p>
                     </Link>)}</div>
                 </section>
                 <Footer />
