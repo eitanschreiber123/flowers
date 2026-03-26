@@ -36,7 +36,7 @@ export default async function Home({params}) {
                     <ImageZoom src={`/flowers/red_${product}.jpeg`} c={styles.oneImage}/>
                     <div style={{display: 'flex', flexDirection: 'column', width: '40%', alignItems: 'center'}}>
                         <h1>{Rojo_nombres[`field${product}`]}</h1>
-                        <p>{Rojo_nombres[`field${product}`]}</p>
+                        <p>{Rojo_precios[`field${product}`]}</p>
                         <p>Muy bonita</p>
                         <Link href={`https://wa.me/593979212069?text=Hola%20,%20me%20interesa%20este%20producto:%20https%3A%2F%2Fflores-de-guayaquil.vercel.app%2Fshop%2Fred%2F${product}`} style={{backgroundColor:'blue',padding:'2px 19px',color:'white',borderRadius:'20px',margin:'10px',alignSelf:'center',width: '100%', textAlign: 'center', fontSize: '1.5em'}}>Compra</Link>
                     </div>

@@ -32,8 +32,8 @@ export default async function Home() {
                             </div>
                           </div>
 
-                      <p>{Rojo_nombres[`field${i}`]}</p>
-                      <p>{Rojo_precios[`field${i}`]}</p>
+                      <p>{Rojo_nombres?.[`field${i}`]}</p>
+                      <p>{Rojo_precios?.[`field${i}`]}</p>
                       </Link>)}</div>
                   </Link>
                   <Link href="/shop/mixed" style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
@@ -50,8 +50,8 @@ export default async function Home() {
                               <button className={styles.button}>Compra</button>
                             </div>
                           </div>
-                      <p>{Mixto_nombres[`field${i}`]}</p>
-                      <p>{Mixto_precios[`field${i}`]}</p>
+                      <p>{Mixto_nombres?.[`field${i}`]}</p>
+                      <p>{Mixto_precios?.[`field${i}`]}</p>
                       </Link>)}</div>
                   </Link>
                 </section>
