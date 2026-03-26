@@ -8,7 +8,6 @@ import Footer from "@/components/footer";
 export const revalidate = 0;
 
 export default async function Home() {
-  const {arriba} = await getData();
   return (
     <div className={styles.page}>
       <main className={styles.main}>

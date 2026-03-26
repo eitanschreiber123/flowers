@@ -1,5 +1,5 @@
-import project from './project-schema'
+import { Rojo_precios, Rojo_nombres, Mixto_precios, Mixto_nombres } from './project-schema'
 
-const schemas = [project];
+const schemas = [Rojo_precios, Rojo_nombres, Mixto_precios, Mixto_nombres];
 
 export default schemas;
