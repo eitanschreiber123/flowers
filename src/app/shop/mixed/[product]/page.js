@@ -5,6 +5,7 @@ import Header from "@/components/newHeader";
 import Footer from "@/components/footer";
 import styles from "../../page.module.css";
 import ImageZoom from "@/components/zoom"
+import PayPalButton from "@/components/paypal";
 
 export const revalidate = 0;
 
@@ -38,7 +39,7 @@ export default async function Home({params}) {
                         <h1>{Mixto_nombres?.[`field${product}`]}</h1>
                         <p>{Mixto_precios?.[`field${product}`]}</p>
                         <p>Muy bonita</p>
-                        <Link href={`https://wa.me/593979212069?text=Hola%20,%20me%20interesa%20este%20producto:%20https%3A%2F%2Fflores-de-guayaquil.vercel.app%2Fshop%2Fmixed%2F${product}`} style={{backgroundColor:'blue',padding:'2px 19px',color:'white',borderRadius:'20px',margin:'10px',alignSelf:'center',width: '100%', textAlign: 'center', fontSize: '1.5em'}}>Compra</Link>
+                        <PayPalButton />
                     </div>
                 </section>
                 <section style={{display:'flex',flexDirection:'column'}}>
