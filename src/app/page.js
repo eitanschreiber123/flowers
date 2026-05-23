@@ -14,7 +14,7 @@ export default async function Home() {
         <Header />
         <div style={{width:'100vw',height:'80vh',backgroundImage:'url(/intro.png)',backgroundRepeat:'no-repeat',backgroundPosition:'center',backgroundSize:'cover',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'flex-start'}}>
           <h1 style={{color:'white',fontSize:'50px',lineHeight:'58px',color:'#99806c',fontWeight: 600,paddingLeft:'15px'}}>Bienvenido a Florinda Floreria</h1>
-          <Link href="/about" style={{padding: '12px 20px 12px 20px',color:'white',backgroundColor:'blue',borderRadius:'20px',border:'none',textDecoration:'none',marginLeft:'15px'}}>Contacto</Link>
+          <Link href="/contact" style={{padding: '12px 20px 12px 20px',color:'white',backgroundColor:'blue',borderRadius:'20px',border:'none',textDecoration:'none',marginLeft:'15px'}}>Contacto</Link>
         </div>
         <section>
           <h1 style={{textAlign:'center',fontSize: '40px',lineHeight: 1.5}}>Categorias</h1>
