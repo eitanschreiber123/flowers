@@ -79,7 +79,7 @@ export default function Header() {
       </span>
 
 
-      <h1 className="title" style={{color:'#99806c',fontSize: '1.5em', fontWeight: 700}}>Flores de Guayaquil</h1>
+      <h1 className="title" style={{color:'#99806c',fontSize: '1.5em', fontWeight: 700}}>Florinda Floreria</h1>
 
 
       {/* Mobile Menu */}

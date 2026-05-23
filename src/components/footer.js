@@ -18,7 +18,7 @@ export default function Footer() {
 
         {/* Info */}
         <div className="space-y-5" style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <h2 className="text-[1.2em] font-semibold">Flores de Guayaquil</h2>
+          <h2 className="text-[1.2em] font-semibold">Florinda Floreria</h2>
 
           <div className="flex items-start gap-3 text-[1.2em] text-gray-700">
             <svg width="20" height="20" viewBox="0 0 384 512" fill="currentColor">
