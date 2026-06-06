@@ -30,7 +30,7 @@ Escríbenos y con gusto te asesoramos.</p>
 <form onSubmit={handleSubmit} className="space-y-4">
         <input
           type="email"
-          placeholder="Your Email"
+          placeholder="Correo"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -38,7 +38,7 @@ Escríbenos y con gusto te asesoramos.</p>
         />
 
         <textarea
-          placeholder="Your Message"
+          placeholder="Mensaje"
           required
           rows={5}
           value={message}
