@@ -40,7 +40,7 @@ export default async function Home() {
                 <h1 style={{fontSize:'1.7em',fontWeight:'bold'}}>Contactanos</h1>
                 <p style={{textAlign:'center',width:'70vw',fontSize:'1.2em',margin:'10px 0',lineHeight:'1.7em'}}>¿Tienes alguna duda, quieres hacer un pedido especial o necesitas ayuda para elegir un arreglo?
 Escríbenos y con gusto te asesoramos.</p>
-<form onSubmit={handleSubmit} style={{width:'70%'}}>
+<form onSubmit={handleSubmit} style={{width:'70%',marginBottom:'10px'}}>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div>
           <input
